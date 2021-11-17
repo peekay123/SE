@@ -1,0 +1,100 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="with=device-width, initial-scale=1.0">
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Assign.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<nav class="navbar">
+		<a href="{% url 'index' %}"><img src="{%static 'images/logo.jpg' %}"></a>
+		<div class="D-links" id="navLinks">
+			<i class="fa fa-times" onclick="hideMenu()"></i>
+
+			<ul>
+				<li><a href="{% url 'index' %}">HOME</a>
+					<li><a href="{% url 'events' %}">EVENTS</a>
+					<!-- <li><a href="{% url 'mission' %}">VIEW</a> -->
+							<!-- <li><a href="{% url 'Df' %}">BOOKING</a> -->
+								<li><a href="{% url 'loginPage' %}">LOGIN</a>
+									<!-- <li><a href="{% url 'logout' %}">LOGOUT</a>				 -->
+				</li>
+			</ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+
+	</nav>
+		<div class="sub-header">
+		<h1>EVENTS</h1>
+	</div>
+
+
+<!-- EVENTS -->
+
+<section class="E">
+	<p>Some of the most recent tournments in our college</p>
+
+	<div class ="B">
+		{% for evnnts in eevnts %}
+		<div class="Ev">
+			<img src="{{evnnts.img.url}}">
+			<div class="T">
+				<h3>{{evnnts.date}}<br> <br>
+					{{evnnts.Event}}
+					
+				</h3>
+			</div>
+		</div>
+		{% endfor %}
+</section>
+<!-- About Us -->
+
+<section class="footer">
+	<h3>About Us</h3>
+	<p id="h">We work as a team to make our college a lively and worth living</p>
+
+	
+<div class="row">
+	<div class="fot">
+		<center><img src="{% static 'images/25.jpg' %}"></center>
+		<div>
+			<p>We are an Enthusiastic Student Learning Software Engineering</p>
+			<h3>Creator: Bsc IT B 2<sup>st</sup> Year <br> Group 2</h3>  
+		</div>
+	</div>
+	<div class="fott">
+		<center><img src="{% static 'images/26.jpg' %}"></center>
+		<div>
+			<p>An Ambitious and Energetic Tutor Who Support Us Through This Project </p>
+			<h3>Tutor: Mr. Tashi Phuntsho</h3>  
+		</div>
+	</div>
+</div>
+
+	<div class="icons">
+		<a href="https://www.facebook.com/kelwangnorbu.dorjee"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.instagram.com/shinobu_xii?utm_medium=copy_link"><i class="fa fa-instagram"></i></a>
+		<a href="https://t.me/Peekay2206"><i class="fa fa-telegram"></i></a>
+		<a href="https://wa.me/+97517715566"><i class="fa fa-whatsapp"></i></a>
+	</div>
+</section>
+<script>
+	var navLinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLinks.style.right = "0";
+	}
+
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+</script>
+</body>
+</html>

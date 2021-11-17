@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="with=device-width, initial-scale=1.0">
+	<title>GCIT GAMES</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Assign.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+</head>
+<body>
+		<nav class="navbar">
+			<a href="{% url 'index' %}"><img src="{%static 'images/logo.jpg' %}"></a>
+			<div class="D-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+
+				<ul>
+					<li><a href="{% url 'index' %}">HOME</a>
+						<li><a href="{% url 'events' %}">EVENTS</a>
+						<!-- <li><a href="{% url 'mission' %}">VIEW</a> -->
+								<!-- <li><a href="{% url 'Df' %}">BOOKING</a> -->
+									<li><a href="{% url 'loginPage' %}">LOGIN</a>
+										<!-- <li><a href="{% url 'logout' %}">LOGOUT</a>				 -->
+					</li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+
+		</nav>
+		<div class="header">
+		<div class="text">
+			<h1>GCIT GAMES AND SPORTS</h1>
+			<p>Organizing students in the college of Information Technology as One!</p>
+			<a href="https://www.gcit.edu.bt/" class="Us">Visit Us to Know More</a>
+		</div>
+	</div>
+
+<!-- ABOUT COLLEGE -->
+
+<section class="C">
+	<h1>Gyalpozhing College of Information Technology</h1>
+	<div>
+		<img src="{% static 'images/22.png' %}">
+		<p>The Gyalpozhing College of Information Technology (GCIT), officially inaugurated on 6th October, 2017 is one of the integral colleges of the Royal University of Bhutan. The decision to establish Gyalpozhing College of Information Technology was made during the meeting held on February 2, 2017 at the Hon’ble Prime Minister’s Office. In line with the decision, the chairman of Tertiary Education Board issued an executive order no. Ref No. MoE/EO/2017/4513 dated 20 February 2017 to establish the College. The institute is 24 kilometers away from Mongar town stretching an area of 62 acres of land engulfed by lush green mountains. The university is one of the three new colleges established in Eastern Bhutan with the VISION to be the ‘Center of Excellence in information Technology steeped in GNH values’. The college at its initial stage offers undergraduate programme in Bachelors of computer applications. The programme is taught by qualified and dedicated local and expatriate faculties.The methodology of “Learning by Doing” is a unique one adopted by GCIT. It aims at giving hands- on experience which helps the students understand the practical implementation aspects and the concepts associated with it.Furthermore, the college aims to diversify the programmes by including more practical and job-oriented course in the long-run.
+</p>
+	</div>
+</section>
+
+<!-- Missionn -->
+<section class="M">
+	<h1>Games and Sports in Our College</h1>
+	<p>Unlike other colleges in Bhutan our college also provides a facility where students can improve their physical fitness and relief themselves from stress by playing games in their free tim.e</p>
+
+	<div class ="A">
+		<div class="P">
+			<h3>Football</h3>
+			<img src="{% static 'images/f.jpeg' %}">
+			<p>A team sport played with ball between two teams of 11 players. It is the most popular sport. </p>
+		</div>
+		<div class="P">
+			<h3>Volleyball</h3>
+			<img src ="{% static 'images/v.jpeg' %}">
+			<p>It is a game played by two teams, where each team consists of 6 players, batting a ball back and forth with hands over a high net.
+			</p>
+		</div>
+		<div class="P">
+			<h3>Basketball</h3>
+			<img src="{%static 'images/B.jpeg' %}">
+			<p>A shooting indoor game between two teams consisting of 5 players. A game to score by shooting the ball through a loop.</p>
+		</div>	
+		<div class="P">
+			<h3>Badminton</h3>
+			<img src="{%static 'images/b.jpeg' %}">
+			<p>It is an indoor sport played with rackets to hit the shuttlecock across a net. It is usually played as single or double.
+			</p>
+		</div>	
+	</div>
+</section>
+
+<!-- mission -->
+
+<section class="M">
+	<h1>Our Mission</h1>
+	<p>Our Mission is to help the Students of Gyalpozhing College of Information Technology to save their time, to make them aware of their game time, to avoid clash between classes regarding their games and to provide equal opportunity to the students to make best use of college facilities.</p>
+
+	<div class ="A">
+		<div class="P">
+			<h3>Time-Management</h3>
+			<img src="{% static 'images/2.jpg' %}">
+			<p>Students are not getting to know about which class is having match in which field and in fact they are losing lots of time finding out. </p>
+		</div>
+		<div class="P">
+			<h3>Awareness</h3>
+			<img src ="{% static 'images/3.png' %}">
+			<p>We aim to create awareness in students about their playing game time so that their plans dont actually contradict.</p>
+		</div>
+		<div class="P">
+			<h3>Clash</h3>
+			<img src="{%static 'images/c.png' %}">
+			<p>We aim to avoide clash between classes regarding games and sports.</p>
+		</div>
+		<div class="P">
+			<h3>Opportunity</h3>
+			<img src="{%static 'images/o.jpg' %}">
+			<p>We also aim to provide equal opportunity for every single student in this college</p>
+		</div>	
+	</div>
+</section>
+
+<!-- About Us -->
+
+<section class="footer">
+	<h3>About Us</h3>
+	<p id="h">We work as a team to make our college a lively and worth living</p>
+
+	
+<div class="row">
+	<div class="fot">
+		<center><img src="{% static 'images/25.jpg' %}"></center>
+		<div>
+			<p>We are an Enthusiastic Student Learning Software Engineering</p>
+			<h3>Creator: Bsc IT B 2<sup>st</sup> Year <br> Group 2</h3>  
+		</div>
+	</div>
+	<div class="fott">
+		<center><img src="{% static 'images/26.jpg' %}"></center>
+		<div>
+			<p>An Ambitious and Energetic Tutor Who Support Us Through This Project </p>
+			<h3>Tutor: Mr. Tashi Phuntsho</h3>  
+		</div>
+	</div>
+</div>
+
+	<div class="icons">
+		<a href="https://www.facebook.com/kelwangnorbu.dorjee"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.instagram.com/shinobu_xii?utm_medium=copy_link"><i class="fa fa-instagram"></i></a>
+		<a href="https://t.me/Peekay2206"><i class="fa fa-telegram"></i></a>
+		<a href="https://wa.me/+97517715566"><i class="fa fa-whatsapp"></i></a>
+	</div>
+</section>
+<script>
+	var navLinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLinks.style.right = "0";
+	}
+
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+</script>
+</body>
+</html>

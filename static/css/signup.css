@@ -1,0 +1,93 @@
+.K{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background: url('../images/27.jpg');
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+}
+
+.You{
+	width: 320px;
+	height: 600px;
+	background: #000;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+}
+.Ypu a{
+	font-size: 15px;
+}
+
+.i{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -5%;
+	left: calc(50% - 50px);
+}
+.K h1{
+	color: #fff;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.K p{
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 800;
+}
+
+.K input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.K input[type="text"], input[type="password"], input[type="email"], input[type="int"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline:none;
+	height: 10px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.K input[type="submit"]{
+	border-bottom: none;
+	outline: none;
+	height: 40px;
+	background: #fc6b03;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.K input[type="submit"]:hover{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+
+.K a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+
+.K a:hover{
+	color: #fcc107;
+
+}

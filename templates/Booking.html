@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>GCIT GAMES Booking Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<meta name="viewpoint" content="with=device-width, initial-scale=1.0">
+	<title>Discussion Forum</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/Assign.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{%static 'css/form.css' %}">
+</head>
+</head>
+<body>
+	<nav class="navbar">
+		<a href="{% url 'index' %}"><img src="{%static 'images/logo.jpg' %}"></a>
+		<div class="D-links" id="navLinks">
+			<i class="fa fa-times" onclick="hideMenu()"></i>
+
+			<ul>
+				<!-- <li><a href="{% url 'index' %}">HOME</a>
+					<li><a href="{% url 'events' %}">EVENTS</a> -->
+						<li><a href="{% url 'mission' %}">VIEW</a>			
+							<li><a href="{% url 'Df' %}">BOOKING</a>
+								<!-- <li><a href="{% url 'loginPage' %}">LOGIN</a> -->
+									<li><a href="{% url 'logout' %}">LOGOUT</a>				
+				</li>
+			</ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+
+	</nav>
+		<div class="hdr">
+		<h1>BOOKING</h1>
+	</div>
+<section>
+	<div class="testbox">
+		<form action="" method="POST">
+			{% csrf_token %}
+		  <div class="banner">
+			<h1>Book Your Field</h1>
+		  </div>
+		  <div class="item">
+			<label for="name">Name/Class<span>*</span></label>
+			<input id="name" type="text" placeholder="Enter Name or Class" name="name" required/>
+		  </div>
+		  <div class="item">
+			<label for="bdate">Date<span>*</span></label>
+			<input id="bdate" type="date" name="date" required/>
+			<i class="fas fa-calendar-alt"></i>
+		  </div>
+		  <div class="flax">
+			<div class="item">
+			  <label>Start Time</label>
+			  <input id ="start" type = "time" name="start">
+			  <!-- <select>
+				<option selected value="" disabled selected></option>
+				<option value="8A" >8 AM</option>
+				<option value="9A">9 AM</option>
+				<option value="10A">10 AM</option>
+				<option value="11A">11 Am</option>
+				<option value="12P">12 Pm</option>
+				<option value="1P">1 Pm</option>
+				<option value="2P">2 Pm</option>
+				<option value="3P">3 Pm</option>
+				<option value="4P">4 Pm</option>
+				<option value="5P">5 Pm</option>
+				<option value="6P">6 Pm</option>
+				<option value="7P">7 Pm</option>
+				<option value="8P">8 Pm</option>
+			  </select>
+			</div> -->
+			<div class="item">
+			  <label>End Time</label>
+			  <input id = "End" type="time" name = "end">
+			  <!-- <select name="end">
+				<option selected value="" disabled selected></option>
+				<option value="8A" >8 AM</option>
+				<option value="9A">9 AM</option>
+				<option value="10A">10 AM</option>
+				<option value="11A">11 Am</option>
+				<option value="12P">12 Pm</option>
+				<option value="1P">1 Pm</option>
+				<option value="2P">2 Pm</option>
+				<option value="3P">3 Pm</option>
+				<option value="4P">4 Pm</option>
+				<option value="5P">5 Pm</option>
+				<option value="6P">6 Pm</option>
+				<option value="7P">7 Pm</option>
+				<option value="8P">8 Pm</option>
+			  </select>
+			</div>
+		  </div> -->
+		  <div class="item">
+			<label for="instructions">Select Fields</label>
+			<select class="form-control"  name="field" required>
+					<option value="Football">Football</option>
+					<option value="Volleyball">Volleyball</option>
+					<option value="Basketball">Basketball</option>
+					<option value="Badminton">Badminton</option>
+				  </select>
+		  </div>
+		  <div class="btn-block">
+			<button type="submit" href="/">Submit</button>
+		  </div>
+		  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		  <script>
+			  {%for msg in messages %}
+			  swal('{{ msg }}');
+			  {% endfor %}
+
+		  </script>
+		  
+		</form>
+	  </div>
+</section>
+<section class="footer">
+	<h3>About Us</h3>
+	<p id="h">We work as a team to make our college a lively and worth living</p>
+
+	
+<div class="row">
+	<div class="fot">
+		<center><img src="{% static 'images/25.jpg' %}"></center>
+		<div>
+			<p>We are an Enthusiastic Student Learning Software Engineering</p>
+			<h3>Creator: Bsc IT B 2<sup>st</sup> Year <br> Group 2</h3>  
+		</div>
+	</div>
+	<div class="fott">
+		<center><img src="{% static 'images/26.jpg' %}"></center>
+		<div>
+			<p>An Ambitious and Energetic Tutor Who Support Us Through This Project </p>
+			<h3>Tutor: Mr. Tashi Phuntsho</h3>  
+		</div>
+	</div>
+</div>
+
+	<div class="icons">
+		<a href="https://www.facebook.com/kelwangnorbu.dorjee"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.instagram.com/shinobu_xii?utm_medium=copy_link"><i class="fa fa-instagram"></i></a>
+		<a href="https://t.me/Peekay2206"><i class="fa fa-telegram"></i></a>
+		<a href="https://wa.me/+97517715566"><i class="fa fa-whatsapp"></i></a>
+	</div>
+</section>
+<script>
+	var navLinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLinks.style.right = "0";
+	}
+
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+</script>
+</body>
+</html>
